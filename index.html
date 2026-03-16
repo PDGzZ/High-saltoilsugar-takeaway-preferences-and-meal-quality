@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>外卖消费行为与膳食质量分析 · 营养关注度对比</title>
+    <title>外卖消费行为与膳食质量分析 · 三高偏好对比</title>
     <!-- Chart.js 轻量可视化 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <!-- 现代化字体 Inter -->
@@ -160,75 +160,75 @@
 </head>
 <body>
 <div class="dashboard">
-    <h1>🍱 外卖消费行为与膳食质量分析 · 营养关注度对比</h1>
-    <div class="subtitle">订购外卖时是否注意营养搭配对膳食质量的影响 (N=25)</div>
+    <h1>🍱 外卖消费行为与膳食质量分析 · 三高偏好对比</h1>
+    <div class="subtitle">订购外卖时是否选择高盐/高油/高糖食物对膳食质量的影响 (N=25)</div>
 
     <!-- 簇状柱状图卡片 -->
     <div class="chart-card">
-        <div class="chart-title">📊 营养关注度与膳食质量 <span>达标率对比</span></div>
+        <div class="chart-title">📊 三高偏好与膳食质量 <span>达标率对比</span></div>
         <div class="canvas-container">
-            <canvas id="attentionVsDietChart"></canvas>
+            <canvas id="highSaltOilSugarChart"></canvas>
         </div>
     </div>
 
     <!-- 文字分析 -->
     <div class="analysis-section">
-        <h2>🔍 营养关注度与膳食质量的关系</h2>
+        <h2>🔍 高盐/高油/高糖外卖偏好与膳食质量的关系</h2>
         <div class="analysis-text">
-            <p>根据C7“订购外卖时是否注意营养搭配”，将学生分为<strong>注意营养组（12人）</strong>和<strong>不注意营养组（13人）</strong>。对比两组在四项膳食核心指标上的达标率，探究营养关注度对膳食质量的影响。</p>
+            <p>根据C12“订购外卖是否会选择高盐/高油/高糖的外卖”，将学生分为<strong>低偏好组（从不/很少，16人）</strong>和<strong>高偏好组（经常/每次/无所谓，9人）</strong>。对比两组在四项膳食核心指标上的达标率，以探究三高外卖偏好对膳食质量的影响。</p>
             
             <div class="insight-badge">
-                <strong>🥩 荤素各半 (D4)</strong> · 注意组达标率58.3% (7/12)，不注意组53.8% (7/13)。两组差异不明显，注意组略高，但基本持平，说明荤素搭配可能受其他因素影响更大。
+                <strong>🥩 荤素各半 (D4)</strong> · 低偏好组达标率68.8% (11/16)，远高于高偏好组33.3% (3/9)。偏好三高外卖的学生更可能荤素搭配失衡，倾向于荤食为主或素食为主，膳食结构不佳。
             </div>
             
             <div class="insight-badge">
-                <strong>🌅 每天早餐 (D5)</strong> · 注意组达标率41.7% (5/12) 显著高于不注意组7.7% (1/13)。注意营养的学生更倾向于规律吃早餐，二者存在强关联。
+                <strong>🌅 每天早餐 (D5)</strong> · 低偏好组达标率31.3% (5/16)，高偏好组11.1% (1/9)。高偏好组早餐规律性更差，可能与晚起、依赖外卖跳过早餐有关。
             </div>
             
             <div class="insight-badge">
-                <strong>🥗 蔬果≥4次/周 (D11)</strong> · 注意组达标率33.3% (4/12) 低于不注意组46.2% (6/13)。这一结果与预期相反，可能由于注意营养组更关注整体搭配但蔬果摄入仍不足，或不注意组通过其他方式补充蔬果。样本量较小也可能是原因。
+                <strong>🥗 蔬果≥4次/周 (D11)</strong> · 低偏好组达标率25.0% (4/16)，高偏好组66.7% (6/9)。此结果与预期相反，高偏好组反而蔬果摄入更充足。可能原因：高偏好组部分学生虽选择三高外卖，但同时也注重蔬果补充（如轻食沙拉、自备水果），或样本较小导致偏差。需结合其他指标综合判断。
             </div>
             
             <div class="insight-badge">
-                <strong>⏳ 进餐有规律 (D20)</strong> · 注意组达标率41.7% (5/12) 远高于不注意组7.7% (1/13)。与早餐习惯类似，注意营养的学生进餐规律性明显更好。
+                <strong>⏳ 进餐有规律 (D20)</strong> · 低偏好组达标率31.3% (5/16)，高偏好组11.1% (1/9)。高偏好组进餐规律性显著较差，与早餐习惯一致，反映其饮食行为更为紊乱。
             </div>
 
-            <p>综合来看，<strong>注意营养搭配的学生在早餐习惯和进餐规律性上显著优于不注意者</strong>，表明营养关注度与良好膳食行为正相关。然而，在蔬果摄入上注意组反而偏低，可能与注意组更倾向于选择高蛋白食物而忽视蔬果有关，也提醒我们营养关注需更全面。荤素搭配两组接近。总体而言，培养外卖时的营养关注意识对改善部分膳食指标（早餐、规律性）有积极作用，但对蔬果摄入的促进尚不明显，需要更精准的干预。</p>
+            <p>综合来看，<strong>偏好高盐/高油/高糖外卖的学生在荤素搭配、早餐规律、进餐规律性上均显著劣于低偏好组</strong>，但在蔬果摄入上意外表现更好。这可能由于“三高”偏好与蔬果摄入并非完全对立，部分学生可能通过其他餐次补充蔬果，或样本量小导致抽样误差。总体而言，三高外卖偏好与多项膳食质量指标负相关，支持研究假设。建议加强营养教育，引导学生在选择外卖时避免长期高油高盐，并保持整体膳食均衡。</p>
         </div>
         <div class="footnote">
-            <i>数据基于问卷星收集 · 截止2026.3.13</i> &nbsp; 图表交互：悬停显示详细达标人数/比例
+            <i>数据基于问卷星收集 · 截止2026.3.13 </i> &nbsp; 图表交互：悬停显示详细达标人数/比例
         </div>
     </div>
 </div>
 
 <script>
     (function() {
-        // 注意组12人，不注意组13人
+        // 低偏好组16人，高偏好组9人
         // 达标率（%）
-        const attention = [58.3, 41.7, 33.3, 41.7];   // 荤素, 早餐, 蔬果, 规律
-        const nonAttention = [53.8, 7.7, 46.2, 7.7];
+        const lowPref = [68.8, 31.3, 25.0, 31.3];   // 荤素, 早餐, 蔬果, 规律
+        const highPref = [33.3, 11.1, 66.7, 11.1];
 
         // 实际人数 (用于tooltip)
-        const attCounts = ['7/12', '5/12', '4/12', '5/12'];
-        const nonCounts = ['7/13', '1/13', '6/13', '1/13'];
+        const lowCounts = ['11/16', '5/16', '4/16', '5/16'];
+        const highCounts = ['3/9', '1/9', '6/9', '1/9'];
 
-        const ctx = document.getElementById('attentionVsDietChart').getContext('2d');
+        const ctx = document.getElementById('highSaltOilSugarChart').getContext('2d');
         new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: ['荤素各半', '每天早餐', '蔬果≥4次/周', '进餐有规律'],
                 datasets: [
                     {
-                        label: '注意营养组 (n=12)',
-                        data: attention,
+                        label: '低三高偏好组 (n=16)',
+                        data: lowPref,
                         backgroundColor: '#5f9fc0',
                         borderRadius: 6,
                         barPercentage: 0.7,
                         categoryPercentage: 0.8,
                     },
                     {
-                        label: '不注意营养组 (n=13)',
-                        data: nonAttention,
+                        label: '高三高偏好组 (n=9)',
+                        data: highPref,
                         backgroundColor: '#e68c7c',
                         borderRadius: 6,
                         barPercentage: 0.7,
@@ -247,8 +247,8 @@
                                 const datasetLabel = context.dataset.label || '';
                                 const value = context.raw.toFixed(1);
                                 let countDetail = '';
-                                if (context.datasetIndex === 0) countDetail = ` (${attCounts[context.dataIndex]})`;
-                                else if (context.datasetIndex === 1) countDetail = ` (${nonCounts[context.dataIndex]})`;
+                                if (context.datasetIndex === 0) countDetail = ` (${lowCounts[context.dataIndex]})`;
+                                else if (context.datasetIndex === 1) countDetail = ` (${highCounts[context.dataIndex]})`;
                                 return `${datasetLabel}: ${value}% ${countDetail}`;
                             }
                         }
